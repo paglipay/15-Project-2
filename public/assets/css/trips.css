@@ -4,21 +4,35 @@ html, body {
   padding: 0;
 
 }
-
+.shield-icon {
+  width: 2em;
+}
 i {
   text-align: center;
   width: 100%; 
 }
 
-p {  height: 100px; }
+p {  height: 75px; }
 
 body {
   color: rgba(0, 0, 0, 0.63);
   /* The image used */
-  /* background-image: url('https://source.unsplash.com/1600x900/?city,dark'); */
+  background-image: url('https://source.unsplash.com/1600x900/?city,dark');
 
   /* Center and scale the image nicely */
   /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
+  
+  position:relative;
+  /* opacity:0.10; */
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
 }
