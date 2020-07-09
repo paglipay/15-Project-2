@@ -12,32 +12,33 @@
                         <h5 class="header">Horizontal Card</h5>
                         <p>I am a very simple card. I am good at containing small bits of information.
                         </p>
-                        <!-- content goes here -->
-                        <form id="tripForm">
-                            <div class="input-field col s12">
-                                <div id="map-places-container">
-                                    <div class="form-group">
-                                        <input id="tripName" name="tripName" type="text"
-                                            placeholder="Trip Name"></input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <label for="methodOfTransport">Choose Mode of Transportation:</label>
-                                    <select id="methodOfTransport">
-                                        <option id="car" name="car" value="car">Car</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <!-- Date input -->
-                                    <p>Date of Arrival at Destination: <input type="text" id="datepicker"></p>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Item Name</th>
+                                    <th>Item Price</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="card-action">
                         <a href="#">This is a link</a>
@@ -69,7 +70,8 @@
                                 <div class="input-field col s12">
                                     <label for="methodOfTransport">Choose Mode of Transportation:</label>
                                     <select id="methodOfTransport">
-                                        <option id="car" name="car" value="car">Car</option>
+                                        <option id="access_time" name="access_time" value="access_time" selected>Car
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@
                                 <div class="input-field col s12">
                                     <label for="methodOfTransport">Choose Mode of Transportation:</label>
                                     <select id="methodOfTransport">
-                                        <option id="car" name="car" value="car">Car</option>
+                                        <option id="directions_car" name="directions_car" value="directions_car">Car</option>
                                     </select>
                                 </div>
                             </div>

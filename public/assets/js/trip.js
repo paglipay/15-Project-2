@@ -1,9 +1,6 @@
 
 
-var nameInput = $("#tripName"),
-	destinationInput = $("#autocomplete"),
-	methodOfTransportInput = '$("#methodOfTransport")',
-	arrivalDateInput = $("#datepicker");
+
 
 var url = window.location.search;
 var tripId;
@@ -12,7 +9,6 @@ var userId;
 var updating = false;
 
 function submitTrip(trip) {
-	console.log('submitTrip')
 	$.post("/trips/new", trip, function () {
 		window.location.href = "/trips";
 	});
@@ -29,35 +25,44 @@ function updateTrip(trip) {
 		});
 }
 
+
+
 function handleFormSubmit(event) {
 	event.preventDefault();
-	// Wont submit the post if we are missing a body, title, or author
-	// if (!destinationInput.val().trim() || !methodOfTransportInput.val().trim() || !arrivalDateInput.val()) {
-	// 	return;
-	// }
-	// // Constructing a newPost object to hand to the database
-	// var newTrip = {
-	// 	name: nameInput
-	// 		.val()
-	// 		.trim(),
-	// 	destination: destinationInput
-	// 		.val()
-	// 		.trim(),
-	// 	methodOfTransport: methodOfTransportInput
-	// 		.val()
-	// 		.trim(),
-	// 	arrivalDate: arrivalDateInput
-	// 		.val()
-	// 		.trim()
-	// };
 
-		var newTrip = {
-		name: 'nameInput',
-		destination: moment().toString(),
-		duration: '111',
-		methodOfTransport: 'directions_car',
-		arrivalDate: '2020-07-07 07:00:00'
+	let nameInput = $("#tripName"),
+		destinationInput = moment().toString(),
+		methodOfTransportInput = $("#methodOfTransport"),
+		arrivalDateInput = $("#datepicker");
+	// Wont submit the post if we are missing a body, title, or author
+	if ( !arrivalDateInput.val()) {
+		return;
+	}
+
+
+
+	// Constructing a newPost object to hand to the database
+	var newTrip = {
+		name: nameInput
+			.val()
+			.trim(),
+		destination: destinationInput,
+		duration: 111,
+		methodOfTransport: methodOfTransportInput
+			.val()
+			.trim(),
+		arrivalDate: arrivalDateInput
+			.val()
+			.trim()
 	};
+
+	// var newTrip = {
+	// 	name: 'nameInput',
+	// 	destination: moment().toString(),
+	// 	duration: '111',
+	// 	methodOfTransport: 'directions_car',
+	// 	arrivalDate: '2020-07-07 07:00:00'
+	// };
 
 	// If we're updating a post run updatePost to update a post
 	// Otherwise run submitPost to create a whole new post
