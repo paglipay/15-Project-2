@@ -33,6 +33,10 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
+    
+    Trip.hasMany(models.DriverTime, {
+      onDelete: "cascade"
+    });
   }
   return Trip;
 }

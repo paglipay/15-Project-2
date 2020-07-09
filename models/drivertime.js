@@ -11,11 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      DriverTime.belongsTo(models.Trip, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
     }
   };
   DriverTime.init({
-    action: DataTypes.STRING,
-    tripId: DataTypes.STRING
+    action: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'DriverTime',

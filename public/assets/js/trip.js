@@ -1,3 +1,5 @@
+
+
 var nameInput = $("#tripName"),
 	destinationInput = $("#autocomplete"),
 	methodOfTransportInput = '$("#methodOfTransport")',
@@ -51,7 +53,7 @@ function handleFormSubmit(event) {
 
 		var newTrip = {
 		name: 'nameInput',
-		destination: 'destinationInput',
+		destination: moment().toString(),
 		methodOfTransport: 'directions_car',
 		arrivalDate: '2020-07-07 07:00:00'
 	};
