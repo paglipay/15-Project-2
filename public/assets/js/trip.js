@@ -54,6 +54,7 @@ function handleFormSubmit(event) {
 		var newTrip = {
 		name: 'nameInput',
 		destination: moment().toString(),
+		duration: '111',
 		methodOfTransport: 'directions_car',
 		arrivalDate: '2020-07-07 07:00:00'
 	};

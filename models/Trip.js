@@ -21,6 +21,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     // The password cannot be null
+    duration: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    // The password cannot be null
     arrivalDate: {
       type: DataTypes.DATE,
       allowNull: false
@@ -33,7 +38,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-    
+
     Trip.hasMany(models.DriverTime, {
       onDelete: "cascade"
     });
