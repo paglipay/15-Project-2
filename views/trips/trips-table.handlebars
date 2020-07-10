@@ -1,0 +1,47 @@
+{{!-- <link rel="stylesheet" href="/assets/css/trips.css"> --}}
+<script type="text/JavaScript" src="https://MomentJS.com/downloads/moment.js"></script>
+<style>
+    .shield-icon {
+        width: 2em;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('.modal').modal();
+        $('select').material_select();
+    });
+</script>
+<div class="container">
+
+    <div class="row">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                </tr>
+
+
+                {{#if trip }}
+                {{#each trip}}
+                <tr>
+                    <td>{{ this.dataValues.id }}</td>
+                    <td>{{ this.dataValues.destination }}</td>
+                    <td>{{ this.dataValues.methodOfTransport }}</td>
+                </tr>
+                {{/each}}
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>

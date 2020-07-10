@@ -5,6 +5,7 @@
 <script>
     $(document).ready(function () {
         $('.modal').modal();
+        $('select').material_select();
     });
 </script>
 <div class="container">
@@ -59,7 +60,6 @@
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
                 {{> details-trip-modal }}
-                {{> new-trip-modal }}
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>

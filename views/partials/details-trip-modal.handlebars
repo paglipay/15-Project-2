@@ -56,33 +56,8 @@
                         <h5 class="header">Horizontal Card</h5>
                         <p>I am a very simple card. I am good at containing small bits of information.
                         </p>
-                        <!-- content goes here -->
-                        <form id="tripForm">
-                            <div class="input-field col s12">
-                                <div id="map-places-container">
-                                    <div class="form-group">
-                                        <input id="tripName" name="tripName" type="text"
-                                            placeholder="Trip Name"></input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <label for="methodOfTransport">Choose Mode of Transportation:</label>
-                                    <select id="methodOfTransport">
-                                        <option id="access_time" name="access_time" value="access_time" selected>Car
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <!-- Date input -->
-                                    <p>Date of Arrival at Destination: <input type="text" id="datepicker"></p>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+
+                        {{> new-trip-modal }}
                     </div>
                     <div class="card-action">
                         <a href="#">This is a link</a>
@@ -100,32 +75,7 @@
                         <h5 class="header">Horizontal Card</h5>
                         <p>I am a very simple card. I am good at containing small bits of information.
                         </p>
-                        <!-- content goes here -->
-                        <form id="tripForm">
-                            <div class="input-field col s12">
-                                <div id="map-places-container">
-                                    <div class="form-group">
-                                        <input id="tripName" name="tripName" type="text"
-                                            placeholder="Trip Name"></input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <label for="methodOfTransport">Choose Mode of Transportation:</label>
-                                    <select id="methodOfTransport">
-                                        <option id="directions_car" name="directions_car" value="directions_car">Car</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-field col s12">
-                                    <!-- Date input -->
-                                    <p>Date of Arrival at Destination: <input type="text" id="datepicker"></p>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+
                     </div>
                     <div class="card-action">
                         <a href="#">This is a link</a>
